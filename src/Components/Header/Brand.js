@@ -1,4 +1,4 @@
-import brandLogo from '../../assets/brand-logo.png';
+import brandLogo from '../../assets/brand-logo.webp';
 
 
 export function Brand() {

@@ -1,7 +1,7 @@
 import AddAnimationTo from './AddAnimationTo';
 import ImageWobbler from './ImageWobbler';
 import MainPost from './MainPost';
-import multihandImg from '../assets/multihand.jpg';
+import multihandImg from '../assets/multihand.webp';
 
 
 
@@ -11,13 +11,11 @@ function PostSection1() {
         <div className="post-section section-1" >
             <AddAnimationTo
                 animationName="emergeFromRight"
-                aproximateHeight={510}
             >
                 <ImageWobbler src={multihandImg} alt="همه فن حریف" />
             </AddAnimationTo>
             <AddAnimationTo
                 animationName="emergeFromLeft"
-                aproximateHeight={510}
             >
                 <MainPost
                     firstMessage='نصب و تعمیر لوازم خانگی در منزل شما در کوتاه ترین زمان'

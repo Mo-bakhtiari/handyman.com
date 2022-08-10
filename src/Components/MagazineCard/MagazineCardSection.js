@@ -1,8 +1,8 @@
 import MagazineCard from './MagazineCard';
 import Carousel, { CarouselItem } from '../Carousel';
-import cooler from '../../assets/magazine-cooler.jpg';
-import vacuumCleaner from '../../assets/magazine-vacuum.jpg';
-import washingMashine from '../../assets/magazine-washing-machine.jpg';
+import cooler from '../../assets/magazine-cooler.webp';
+import vacuumCleaner from '../../assets/magazine-vacuum.webp';
+import washingMashine from '../../assets/magazine-washing-machine.webp';
 import { PrimaryButton } from '../buttons';
 import { Link } from 'react-router-dom';
 

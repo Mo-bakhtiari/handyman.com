@@ -1,7 +1,7 @@
 import AddAnimationTo from './AddAnimationTo';
 import ImageWobbler from './ImageWobbler';
 import MainPost from './MainPost';
-import handymanServices from '../assets/handyman-services.jpg';
+import handymanServices from '../assets/handyman-services.webp';
 import {GiRotaryPhone} from 'react-icons/gi';
 
 
@@ -11,13 +11,12 @@ function PostSection2() {
         <div className="post-section section-2" >
             <AddAnimationTo
                 animationName="emergeFromLeft"
-                aproximateHeight={510}
             >
                 <ImageWobbler src={handymanServices} alt="هندیمن در خدمت شما" />
             </AddAnimationTo>
             <AddAnimationTo
                 animationName="emergeFromRight"
-                aproximateHeight={510} >
+            >
                 <MainPost
                     firstMessage='بیش از 60000 مشترک فعال'
                     secondMessage='داستان هندیمن از کجا شروع شد؟'

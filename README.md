@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="">
+    <img src="./src/assets/brand-logo.webp" alt="RBE logo" target="_blank" width="200" height="165">
+  </a>
+</p>
+<h3 align="center">Handyman</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="https://handyman008.netlify.app/" target="_blank"><strong ><span Style="color: blue">Live Demo</span> </strong></a>
+</p>
+  <br>
+  <br>
 
-## Available Scripts
+# Handyman - home appliance services
 
-In the project directory, you can run:
+This project is a learning experience to get my feet wet at frontend development.
+its real world application is to provide customers with at-home appliance repair services as well as a small shop for appliance replacements.
 
-### `npm start`
+## Built with
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[React v18.2.0](https://beta.reactjs.org/)  
+[React Router v6.3.0](https://reactrouter.com/en/main)  
+[css](https://www.w3.org/Style/CSS/current-work)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup & Deployment
 
-### `npm test`
+to launch this project locally on your machine run the following commands :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/Mo-bakhtiari/handyman.com.git
+npm install
+npm start
+```
 
-### `npm run build`
+this will run the project in development mode. to make a production build of the project to be deployed you can run:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+since the project was initialized by [CRA](https://create-react-app.dev/) this will automatically bundle React in production mode.
+you can now deploy *build* folder to a host server of your choice.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Performance considerations
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+chances are to build as small as a single page website that loads much slower than a gigantic website like Amazon if you are not careful enough with the efficiency of your code. to avoid such scandal i implemented code splitting technique and took the chrome Lighthouse advices.
 
 ### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+you can read about code splitting [Here]( https://facebook.github.io/create-react-app/docs/code-splitting).  
 
-### Analyzing the Bundle Size
+### Lighthouse Advices
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+based on Lighthouse first recommendation, [Serve images in next-gen formats](https://web.dev/uses-webp-images/?utm_source=lighthouse&utm_medium=devtools), images were saved in [WebP](https://developers.google.com/speed/webp/) format.  
+the second recommendation was to [Eliminate render-blocking resources](https://web.dev/render-blocking-resources/?utm_source=lighthouse&utm_medium=devtools) and by taking that, external links for importing fonts and icons were removed and those fonts and icons were included locally in the project.
+as the result of these enhancements performance score was doubled. 
 
-### Making a Progressive Web App
+## Source of Design 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+front design was adopted from [Tamironline](https://tamironline.com/) website but some pages were omitted to make a reasonable amount of work out of it.

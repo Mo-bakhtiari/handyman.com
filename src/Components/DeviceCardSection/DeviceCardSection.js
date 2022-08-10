@@ -1,11 +1,11 @@
 import { DeviceCard } from './DeviceCard';
-import jaroo from '../../assets/jaroo.png';
-import lebasshooyi from '../../assets/lebasshooyi.png';
-import spilet from '../../assets/spilet.png';
-import dishwasher from '../../assets/dishwasher.png';
-import sideBySide from '../../assets/side-by-side.png';
-import tv from '../../assets/tv.png';
-import yakhchal from '../../assets/yakhchal.png';
+import jaroo from '../../assets/jaroo.webp';
+import lebasshooyi from '../../assets/lebasshooyi.webp';
+import spilet from '../../assets/spilet.webp';
+import dishwasher from '../../assets/dishwasher.webp';
+import sideBySide from '../../assets/side-by-side.webp';
+import tv from '../../assets/tv.webp';
+import yakhchal from '../../assets/yakhchal.webp';
 import Carousel, { CarouselItem } from '../Carousel';
 
 
@@ -75,51 +75,3 @@ export function DeviceCardSection() {
         </div>
     )
 }
-
-
-// return (
-//     <div className="device-card-section" >
-//         <DeviceCard
-//             name="جاروبرقی"
-//             cardSrc={jaroo}
-//             cardAlt="جاروبرقی"
-//             cardPath="/repair/vacuum-cleaner"
-//         />
-//         <DeviceCard
-//             name="ماشین لباسشویی"
-//             cardSrc={lebasshooyi}
-//             cardAlt="ماشین لباسشویی"
-//             cardPath="/repair/washing-machine"
-//         />
-//         <DeviceCard
-//             name="کولرگازی و اسپیلت"
-//             cardSrc={spilet}
-//             cardAlt="کولرگازی و اسپیلت"
-//             cardPath="/repair/spilet"
-//         />
-//         <DeviceCard
-//             name="ماشین ظرفشویی"
-//             cardSrc={dishwasher}
-//             cardAlt="ماشین ظرفشویی"
-//             cardPath="/repair/dishwasher"
-//         />
-//         <DeviceCard
-//             name="ساید بای ساید"
-//             cardSrc={sideBySide}
-//             cardAlt="ساید بای ساید"
-//             cardPath="/repair/side-by-side"
-//         />
-//         <DeviceCard
-//             name="تلویزیون"
-//             cardSrc={tv}
-//             cardAlt="تلویزیون"
-//             cardPath="/repair/tv"
-//         />
-//         <DeviceCard
-//             name="یخچال فیریزر"
-//             cardSrc={yakhchal}
-//             cardAlt="یخچال فیریزر"
-//             cardPath="/repair/refrigerator-and-freezer"
-//         />
-//     </div>
-// )

@@ -1,8 +1,8 @@
 import AddAnimationTo from './AddAnimationTo';
 import ImageWobbler from './ImageWobbler';
 import MainPost from './MainPost';
-import shopPic from '../assets/shop-pic.jpg';
-import shopBag from '../assets/shop.png';
+import shopPic from '../assets/shop-pic.webp';
+import shopBag from '../assets/shop.webp';
 
 
 function PostSection3() {
@@ -11,13 +11,12 @@ function PostSection3() {
         <div className="post-section section-3" >
             <AddAnimationTo
                 animationName="emergeFromRight"
-                aproximateHeight={510}
             >
                 <ImageWobbler src={shopPic} alt="از فروشگاه ما دیدن کنید" />
             </AddAnimationTo>
             <AddAnimationTo
                 animationName="emergeFromLeft"
-                aproximateHeight={510} >
+            >
                 <MainPost
                     firstMessage='محصولات کاربردی و متنوع'
                     secondMessage='داستان هندیمن از کجا شروع شد؟'

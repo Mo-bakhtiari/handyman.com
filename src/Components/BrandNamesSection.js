@@ -1,13 +1,13 @@
 import Carousel, {CarouselItem} from "./Carousel";
 import {Link} from "react-router-dom";
-import aeg from '../assets/aeg.png';
-import Ariston from '../assets/Ariston.png';
-import Bosch from '../assets/Bosch.png';
-import Daewoo from '../assets/Daewoo.png';
-import generalElectric from '../assets/General-electric.png';
-import Indesit from '../assets/Indesit.png';
-import LG from '../assets/LG.png';
-import Samsung from '../assets/Samsung.png';
+import aeg from '../assets/aeg.webp';
+import Ariston from '../assets/Ariston.webp';
+import Bosch from '../assets/Bosch.webp';
+import Daewoo from '../assets/Daewoo.webp';
+import generalElectric from '../assets/General-electric.webp';
+import Indesit from '../assets/Indesit.webp';
+import LG from '../assets/LG.webp';
+import Samsung from '../assets/Samsung.webp';
 
 
 function BrandNamesSection() {
@@ -16,7 +16,8 @@ function BrandNamesSection() {
         <div className="brand-names-section" >
         <Carousel 
             NOActiveItems={5}
-            decrementOffset={0} 
+            decrementOffset={0}
+            stepLength={1} 
         >
             <CarouselItem >
                 <Link to="/brands/aeg" >

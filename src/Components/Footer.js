@@ -1,8 +1,8 @@
 import AddAnimationTo from './AddAnimationTo';
-import brandLogo from '../assets/brand-logo.png';
+import brandLogo from '../assets/brand-logo.webp';
 import { Link } from 'react-router-dom';
-import otaghAsnaf from '../assets/Otagh-Asnaf.png';
-import enamad from '../assets/enamad.png';
+import otaghAsnaf from '../assets/Otagh-Asnaf.webp';
+import enamad from '../assets/enamad.webp';
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FiAtSign } from "react-icons/fi";
 import { BiPhoneCall } from "react-icons/bi";
@@ -16,7 +16,7 @@ function Footer() {
     return (
         <AddAnimationTo
             animationName="emergeFromBottom"
-            aproximateHeight={500} >
+        >
             <footer id="footer" >
                 <div className="brand-logo" >
                     <div className='veil' ></div>
@@ -33,19 +33,19 @@ function Footer() {
                             />
                         </Link>
                         <Link referrerPolicy='origin' target='_blank' to='https://trustseal.enamad.ir/?id=188439&Code=D2mFpJXPQFfgy9FKWkwr' >
-                            <img loading='lazy' src='https' alt='نماد اعتماد الکترونیکی' />
+                            <img loading='lazy' src={enamad} alt='نماد اعتماد الکترونیکی' />
                         </Link>
                         <Link to='/' >
                             <img loading='lazy' src={otaghAsnaf} alt='اتاق اصناف ایران' />
                         </Link>
                     </div>
                     <div className="contact-info" >
-                        <ul className="" >
+                        <ul >
                             <li className="address" >
                                 <MdOutlineLocationOn />
                                 <span> تهران، خیابان شریعتی ، نرسیده به پل سیدخندان، پلاک 874 ( جنب لوستر آذین ) ، طبقه چهارم </span>
                             </li>
-                            <li className="" >
+                            <li>
                                 <FiAtSign />
                                 <span>
                                     <a href='mailto:handyman.com@gmail.com' rel='nofollow'>
@@ -53,7 +53,7 @@ function Footer() {
                                     </a>
                                 </span>
                             </li>
-                            <li className="" >
+                            <li >
                                 <BiPhoneCall />
                                 <span>
                                     <a href='tel:012345678' rel='nofollow'>012345678</a>

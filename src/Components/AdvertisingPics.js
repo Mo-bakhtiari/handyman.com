@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import warranty from '../assets/zemanat.png';
-import whyHandyman from '../assets/why-handyman.jpg';
-import furooshgah from '../assets/furooshgah.jpg';
-import brandLogo from '../assets/brand-logo.png';
+import warranty from '../assets/zemanat.webp';
+import whyHandyman from '../assets/why-handyman.webp';
+import furooshgah from '../assets/furooshgah.webp';
+import brandLogo from '../assets/brand-logo.webp';
 import AddAnimationTo from './AddAnimationTo';
 
 
@@ -13,7 +13,7 @@ function AdvertisingPics() {
         <div className="advertising-pics" >
             <AddAnimationTo
                 animationName="emergeFromRight"
-                aproximateHeight={200} >
+            >
                 <Link to='/warranty-terms' className="warranty" >
                     <img loading='lazy' src={warranty} alt="ًضمانت هم داره" />
                 </Link>
@@ -23,14 +23,14 @@ function AdvertisingPics() {
             </AddAnimationTo>
             <AddAnimationTo
                 animationName="emergeFromLeft"
-                aproximateHeight={500} >
+            >
                 <Link to='/shop' className="shop" >
                     <img loading='lazy' src={furooshgah} alt="ًفروشگاه" />
                 </Link>
             </AddAnimationTo>
             <AddAnimationTo
                 animationName="emergeFromBottom"
-                aproximateHeight={200} >
+            >
                 <Link to='/' className="brand" >
                     <div className="brand" >
                         <img loading='lazy' src={brandLogo} alt="لوگو" />

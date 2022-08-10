@@ -30,7 +30,7 @@ function MagazineCard(props) {
             onMouseLeave={handleMouseLeave} 
         >
             <Link to={props?.cardPath} className="magazine-img" >
-                <img loading='lazy' src={props?.imageSrc} alt={props?.imageAlt} />
+                <img src={props?.imageSrc} alt={props?.imageAlt} />
                 <div className="img-layer" ref={imgLayer} ></div>
                 <div className='reading-time' ref={readingTime}>
                     <span>مدت مطالعه:</span>{props?.readingDuration}

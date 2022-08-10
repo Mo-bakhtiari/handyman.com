@@ -16,20 +16,17 @@ export default function Home() {
             <PostSection1 />
             <AddAnimationTo
                 animationName="emergeFromBottom"
-                aproximateHeight={400}
             >
                 <DeviceCardSection />
             </AddAnimationTo>
             <AddAnimationTo
                 animationName="emergeFromBottom"
-                aproximateHeight={70}
             >
                 <BrandNamesSection />
             </AddAnimationTo>
             <PostSection2 />
             <AddAnimationTo
                 animationName="emergeFromBottom"
-                aproximateHeight={300}
             >
                 <RequestStepSection />
             </AddAnimationTo>
@@ -37,7 +34,6 @@ export default function Home() {
             <PostSection3 />
             <AddAnimationTo
                 animationName="emergeFromBottom"
-                aproximateHeight={400}
             >
                 <MagazineCardSection />
             </AddAnimationTo>

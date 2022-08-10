@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Tajawal";
+    src: url("./fonts/Tajawal/Tajawal-Medium.ttf");
+}
+
 body {
     font-family: 'Tajawal', sans-serif;
     margin: 0;
@@ -170,6 +175,42 @@ nav ul li a:hover {
     grid-column: 1;
 }
 
+.nav-menu .active {
+    background-color: #476fff62;
+    outline: 5px solid #476fff62;
+    border-radius: 3px;
+}
+
+.head-wrapper nav .services-link {
+    position: relative;
+    height: 50PX;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.head-wrapper nav .sub-menu {
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    background-color: white;
+    width: 13em;
+    font-size: 0.8rem;
+    padding: 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.head-wrapper .sub-menu ul {
+    height: 10em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 .head-wrapper a:nth-child(3) {
     grid-column: 4;
     justify-self: end;
@@ -184,10 +225,6 @@ nav ul li a:hover {
 }
 
 .toggle-bars { 
-    display: none;
-}
-
-.head-wrapper .dial-button {
     display: none;
 }
 
@@ -207,7 +244,8 @@ nav ul li a:hover {
     z-index: 10;
     overflow: hidden;
     overflow-y: auto;
-    transition: all .2s linear;
+    transition: all .2s ease-in;
+    visibility: hidden;
 }
 
 .mask {
@@ -222,24 +260,35 @@ nav ul li a:hover {
     transition: all .5s linear;
 }
 
-.fa-square-xmark {
-    font-size: 2em;
-    align-self: start;
+.mobile-menu.sub-menu {
+    display: block;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
-.mob-menu-phone {
+.mobile-menu .close-btn {
+    font-size: 30px;
+}
+
+.mobile-menu .sub-menu-btn {
+    font-size: 30px;
+    position: absolute;
+    left: 2px;
+}
+
+.mob-menu-log {
     font-size: 1.2em;
     display: flex;
     width: 100%;
     height: 2em;
     background-color: #476FFF;
     grid-column: span 2;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     overflow: hidden;
 }
 
-.mob-menu-phone .fa-phone {
+.mob-menu-log .fa-phone {
     color: white;
     padding: .5em;
 }
@@ -248,7 +297,7 @@ nav ul li a:hover {
     border-radius: 0;
 }
 
-.mob-menu-phone button {
+.mob-menu-log button {
     font-size: .9em ;
     border: none;
 }
@@ -274,6 +323,11 @@ nav ul li a:hover {
     grid-column: 1/3;
     align-self: center;
     justify-self: center;
+}
+
+.mobile-menu.sub-menu > .sub-menu-heading {
+    display: flex;
+    justify-content: space-between;
 }
 
 .Request-window-veil {
@@ -552,15 +606,10 @@ input::-webkit-inner-spin-button {
 }
 
 .carousel-nav {
-    position: absolute;
-    z-index: 0;
-    bottom: -2.5vw;
     width: 8rem;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    left: 0%;
-    right: 0%;
 }
 
 .carousel-nav .arrow {
@@ -624,6 +673,7 @@ input::-webkit-inner-spin-button {
 }
 
 .brand-names-section .carousel-nav {
+    position: absolute;
     width: 100%;
     bottom: 0;
     top: 0;
@@ -801,6 +851,7 @@ input::-webkit-inner-spin-button {
 .magazine-card > p, .magazine-card > h4 {
     white-space: pre-wrap;
     width: 100%;
+    height: 10ex;
     font-size: 1em;
     transition: all 0.3s;
     word-spacing: 0.2pt;
@@ -945,12 +996,12 @@ input::-webkit-inner-spin-button {
     margin-top: 20px;
 }
 
-.service-advanteges-wrapper {
+.service-advantages-wrapper {
     background-color: #f9fafe;
     padding: 30px;
 }
 
-.service-advanteges {
+.service-advantages {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -960,11 +1011,11 @@ input::-webkit-inner-spin-button {
     margin-right: 12vw;
 }
 
-.service-advanteges img {
+.service-advantages img {
     margin-left: 10px;
 }
 
-.service-advanteges .text {
+.service-advantages .text {
     font-size: 10pt;
     word-spacing: -1.5px;
 }
@@ -1179,7 +1230,7 @@ input::-webkit-inner-spin-button {
         font-size: 0.9rem;
     }
 
-    .service-advanteges-wrapper {
+    .service-advantages-wrapper {
         padding-bottom: 60px;
     }
 
@@ -1218,14 +1269,9 @@ input::-webkit-inner-spin-button {
         grid-column: 1/5;
     }
 
-    .head-wrapper .dial-button .fa-phone {
-        margin-left: .5em;
-        color: black;
-    }
-
-    .head-wrapper .dial-button {
+    .head-wrapper > a:nth-child(3) {
         display: inline-block;
-        grid-column-end: 4;
+        grid-column: auto / 4;
         grid-row: 1;
         justify-self: end;
     }
@@ -1326,7 +1372,7 @@ input::-webkit-inner-spin-button {
         margin: auto;
     }
 
-    .head-wrapper .dial-button {
+    .head-wrapper > a:nth-child(3) {
         display: none;
     } 
 
@@ -1404,7 +1450,7 @@ input::-webkit-inner-spin-button {
         font-size: 0.8rem;
     }
 
-    .service-advanteges {
+    .service-advantages {
         margin: auto;
     }
 

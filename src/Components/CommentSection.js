@@ -1,6 +1,6 @@
 import Comment from "./Comment";
 import Carousel, { CarouselItem } from "./Carousel";
-import smileEmoji from '../assets/smile.png';
+import smileEmoji from '../assets/smile.webp';
 import fakeComments from './data/fakeComments.json';
 
 
@@ -23,7 +23,7 @@ function CommentSection() {
     return (
         <div className="comment-section" >
             <div className='add' >
-                <img loading='lazy' src={smileEmoji} />
+                <img loading='lazy' src={smileEmoji} alt='با ما بخند' />
                 <span>رضایت مشتری یک شعار نیست</span>
             </div>
             <h3>مشتریان هندیمن چه میگویند؟</h3>

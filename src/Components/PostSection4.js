@@ -1,7 +1,7 @@
 import AddAnimationTo from './AddAnimationTo';
 import ImageWobbler from './ImageWobbler';
 import CommentSection from './CommentSection';
-import commentPic from '../assets/comment.jpg';
+import commentPic from '../assets/comment.webp';
 
 
 function PostSection4() {
@@ -10,12 +10,11 @@ function PostSection4() {
         <div className="post-section section-4" >
             <AddAnimationTo
                 animationName="emergeFromRight"
-                aproximateHeight={510} >
+            >
                 <CommentSection />
             </AddAnimationTo>
             <AddAnimationTo
                 animationName="emergeFromLeft"
-                aproximateHeight={510}
             >
                 <ImageWobbler src={commentPic} alt="از فروشگاه ما دیدن کنید" />
             </AddAnimationTo>

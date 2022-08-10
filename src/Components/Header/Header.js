@@ -7,11 +7,12 @@ import { NavMenu } from './NavMenu';
 import { ShoppingCart } from './ShoppingCart';
 import { ToggleBars } from './ToggleBars';
 import { SearchBox } from './SearchBox';
-import { DialButton } from './DialButton';
-import { MobileMenu } from './MobileMenu';
 import { RequestWindow } from './RequestWindow';
 import { RequestServices } from './RequestServices';
 import AddAnimationTo from '../AddAnimationTo';
+import ServicesLinkForDesktop from './ServicesLinkForDesktop';
+const MobileMenuPromise = import('./MobileMenu');
+const MobileMenu = React.lazy(() => MobileMenuPromise);
 
 
 export default function Header(props) {
@@ -21,7 +22,7 @@ export default function Header(props) {
     return (
         <AddAnimationTo
             animationName="emergeFromTop"
-            aproximateHeight={200} >
+        >
             <header className='head-wrapper'>
                 <Brand />
                 <Link to='/login' >
@@ -31,17 +32,16 @@ export default function Header(props) {
                     <ShoppingCart />
                 </Link>
                 <ToggleBars MenuVisibility={MenuVisibility} setMenuVisibility={setMenuVisibility} />
-                <NavMenu />
+                <NavMenu servicesLink={<ServicesLinkForDesktop />} />
                 <SearchBox />
-                <DialButton setReqWindowVisibility={setReqWindowVisibility} />
                 <MobileMenu
                     MenuVisibility={MenuVisibility}
                     setMenuVisibility={setMenuVisibility}
                     setReqWindowVisibility={setReqWindowVisibility}
                 />
+            </header>
                 <RequestWindow reqWindowVisibility={reqWindowVisibility} setReqWindowVisibility={setReqWindowVisibility} />
                 <RequestServices setReqWindowVisibility={setReqWindowVisibility} />
-            </header>
-        </AddAnimationTo> 
+        </AddAnimationTo>
     )
 }

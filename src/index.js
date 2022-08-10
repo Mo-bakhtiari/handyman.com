@@ -3,7 +3,7 @@ import App from './App';
 import './index.css';
 
 
-const root = ReactDOM.createRoot(document.getElementById('site-header'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(
         <App />
     );

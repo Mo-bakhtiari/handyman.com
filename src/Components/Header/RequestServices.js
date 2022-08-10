@@ -18,7 +18,7 @@ export function RequestServices({ setReqWindowVisibility }) {
     return (
         <div
             className="request-services"
-            onClick={() => setReqWindowVisibility(true)}
+            onClick={() => setReqWindowVisibility((prevState) => !prevState)}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

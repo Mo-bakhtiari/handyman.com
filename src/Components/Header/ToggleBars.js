@@ -1,12 +1,15 @@
+import {FaBars} from 'react-icons/fa';
+
+
 export function ToggleBars({ MenuVisibility, setMenuVisibility }) {
 
     return (
         <div className="toggle-bars" >
-            <i
+            <FaBars
                 onClick={() => setMenuVisibility(!MenuVisibility)}
-                className="fa fa-bars"
+                className="fa-bars"
                 aria-hidden="true"
-            ></i>
+            />
         </div>
     )
 }

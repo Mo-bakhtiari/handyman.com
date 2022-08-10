@@ -5,6 +5,8 @@ import { Brand } from './Brand';
 import { NavMenu } from './NavMenu';
 import { Link } from 'react-router-dom';
 import { SecondaryButton } from '../buttons';
+import {FaWindowClose} from 'react-icons/fa';
+import {FaPhoneAlt} from 'react-icons/fa';
 
 
 export function MobileMenu({ MenuVisibility, setMenuVisibility, setReqWindowVisibility }) {
@@ -41,21 +43,21 @@ export function MobileMenu({ MenuVisibility, setMenuVisibility, setReqWindowVisi
             <div onClick={toggleMobileMenu} className="mask" ></div>
             <div className="mobile-menu" >
                 <Brand />
-                <i
+                <FaWindowClose
                     onClick={toggleMobileMenu}
-                    className="fa-solid fa-square-xmark"
-                ></i>
+                    className="fa-square-xmark"
+                />
                 <div className='mob-menu-phone'>
                     <Link to='/login' >
                         <LogButton />
                     </Link>
                     <SecondaryButton onClick={toggleRequestWindow} >
-                        <i className="fas fa-phone"></i>
+                        <FaPhoneAlt className="fa-phone"/>
                         021-54321
                     </SecondaryButton>
                 </div>
                 <NavMenu />
-                <img src={handymanServices} />
+                <img loading='lazy' src={handymanServices} />
             </div>
         </div>
     )

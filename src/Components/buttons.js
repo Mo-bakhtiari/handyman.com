@@ -1,56 +1,78 @@
-import {useRef} from 'react'
+import { useRef } from 'react'
 
 
 export function SecondaryButton(props) {
-    const transitionLayer = useRef(null)
+    const content = useRef(null);
+    const transientLayer = useRef(null);
 
-    const handleHover = useHandleHover(transitionLayer);
+    const useSecondaryBtnyHover = useHandleSecondaryBtnyHover(content)(transientLayer);
 
-    const {className, ...restProps} = props ;
+    const { className, ...restProps } = props;
 
     return (
-        <button 
+        <button
             type="button"
-            className={`btn btn-secondary ${className}`}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleHover}
+            className={`btn btn-secondary ${className ? className : ''}`}
+            onMouseEnter={useSecondaryBtnyHover}
+            onMouseLeave={useSecondaryBtnyHover}
             {...restProps}
         >
-            <div className='btn-content'>{props.children}</div>
-            <div ref={transitionLayer} className='btn-secondary-tran'></div>
+            <div ref={content} className='btn-content'>{props.children}</div>
+            <div ref={transientLayer} className='btn-secondary-tran'></div>
         </button>
     )
 }
 
 
 export function PrimaryButton(props) {
-    const transitionLayer = useRef(null)
+    const content = useRef(null);
+    const transientLayer = useRef(null);
 
-    const handleHover = useHandleHover(transitionLayer);
+    const handlePrimaryBtnHover = useHandlePrimarBtnyHover(content)(transientLayer);
 
-    const {className, ...restProps} = props ;
+    const { className, ...restProps } = props;
 
     return (
-        <button 
+        <button
             type="button"
-            className={`btn btn-primary ${className}`}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleHover}
+            className={`btn btn-primary ${className ? className : ''}`}
+            onMouseEnter={handlePrimaryBtnHover}
+            onMouseLeave={handlePrimaryBtnHover}
             {...restProps}
         >
-            <div className='btn-content'>{props.children}</div>
-            <div ref={transitionLayer} className='btn-primary-tran'></div>
+            <div ref={content} className='btn-content'>{props.children}</div>
+            <div ref={transientLayer} className='btn-primary-tran'></div>
         </button>
     )
 }
 
-function useHandleHover(transitionLayer) {
-    const handleHover = (e) => {
-        if (e.type === 'mouseenter') {
-            transitionLayer.current.style.height = 100 + '%'
-        } else {
-            transitionLayer.current.style.height = ''
+
+function useHandleSecondaryBtnyHover(contentElement) {
+    return (transientLayer) => {
+        const handleTransition = (e) => {
+            if (e.type === 'mouseenter') {
+                transientLayer.current.style.height = 100 + '%';
+                contentElement.current.style.color = 'black';
+            } else {
+                transientLayer.current.style.height = ''
+                contentElement.current.style.color = '';
+            }
         }
+        return handleTransition;
     }
-    return handleHover
+}
+
+function useHandlePrimarBtnyHover(contentElement) {
+    return (transientLayer) => {
+        const handleTransition = (e) => {
+            if (e.type === 'mouseenter') {
+                transientLayer.current.style.height = 100 + '%';
+                contentElement.current.style.color = 'white';
+            } else {
+                transientLayer.current.style.height = ''
+                contentElement.current.style.color = '';
+            }
+        }
+        return handleTransition;
+    }
 }

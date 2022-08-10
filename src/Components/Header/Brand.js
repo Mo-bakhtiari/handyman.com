@@ -6,7 +6,7 @@ export function Brand() {
         <div id='brand' >
             <h1 id='brand-name'>هندیمن
                 <span>
-                    <img src={brandLogo} id='brand-logo' alt='logo' />
+                    <img loading='lazy' src={brandLogo} id='brand-logo' alt='logo' />
                 </span>
             </h1>
         </div>
